@@ -11,4 +11,10 @@ export class Login {
         await this.loginWindow.inputPasswordFill();
         await this.loginWindow.buttonSignInClick();
     }
+
+    async resetPassword() {
+        await this.loginWindow.buttonResetPasswordClick();
+        await this.loginWindow.inputEmailFill();
+        await this.loginWindow.buttonSendResetPasswordClick();
+    }
 }
