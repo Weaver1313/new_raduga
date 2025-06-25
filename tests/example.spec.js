@@ -1,11 +1,11 @@
-import { test, expect } from "@playwright/test";
-import { Base } from "../src/pages/index";
+import { test } from "@playwright/test";
+import { App } from "../src/pages/index";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-test("has title", async ({ page }) => {
-    const base = new Base(page);
-    await base.openAuthPage();
-    await base.loginPage.signIn();
+test("Авторизация", async ({ page }) => {
+    const app = new App(page);
+    await app.base.openAuthPage();
+    await app.loginPage.signIn();
 });
