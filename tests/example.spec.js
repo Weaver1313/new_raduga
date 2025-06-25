@@ -1,8 +1,6 @@
-import { test } from "@playwright/test";
-import { App } from "../src/pages/index";
+import { test } from "../src/fixtures/index";
 
-test("Авторизация", async ({ page }) => {
-    const app = new App(page);
+test("Авторизация", async ({ app }) => {
     await app.base.openAuthPage();
     await app.loginPage.signIn();
 });
