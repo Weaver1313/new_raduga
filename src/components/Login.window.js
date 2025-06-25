@@ -35,14 +35,14 @@ export class LoginWindow {
         );
     }
 
-    async inputLoginFill() {
-        await this.inputLogin.fill(process.env.LOGIN);
-        await expect(this.inputLogin).toHaveValue(process.env.LOGIN);
+    async inputLoginFill(login) {
+        await this.inputLogin.fill(login);
+        await expect(this.inputLogin).toHaveValue(login);
     }
 
-    async inputPasswordFill() {
-        await this.inputPassword.fill(process.env.PASSWORD);
-        await expect(this.inputPassword).toHaveValue(process.env.PASSWORD);
+    async inputPasswordFill(password) {
+        await this.inputPassword.fill(password);
+        await expect(this.inputPassword).toHaveValue(password);
     }
 
     async buttonSignInClick() {
@@ -53,8 +53,8 @@ export class LoginWindow {
         await this.buttonResetPassword.click();
     }
 
-    async inputEmailFill() {
-        await this.inputEmail.fill(process.env.LOGIN);
+    async inputEmailFill(email) {
+        await this.inputEmail.fill(email);
         await expect(this.inputEmail).toHaveValue(process.env.LOGIN);
     }
 

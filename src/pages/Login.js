@@ -7,14 +7,14 @@ export class Login {
     }
 
     async signIn() {
-        await this.loginWindow.inputLoginFill();
-        await this.loginWindow.inputPasswordFill();
+        await this.loginWindow.inputLoginFill(process.env.LOGIN);
+        await this.loginWindow.inputPasswordFill(process.env.PASSWORD);
         await this.loginWindow.buttonSignInClick();
     }
 
     async resetPassword() {
         await this.loginWindow.buttonResetPasswordClick();
-        await this.loginWindow.inputEmailFill();
+        await this.loginWindow.inputEmailFill(process.env.LOGIN);
         await this.loginWindow.buttonSendResetPasswordClick();
     }
 }
