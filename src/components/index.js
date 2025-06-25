@@ -1,2 +1,2 @@
-export * from "./NavBar/NavBar";
-export * from "./Login.window";
+export * from "./NavBar.js";
+export * from "./Login.window.js";
