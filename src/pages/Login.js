@@ -1,8 +1,5 @@
 import dotenv from "dotenv";
 import { LoginWindow } from "../../src/components/index";
-import { Base } from "./Base";
-
-dotenv.config();
 
 export class Login {
     constructor(page) {

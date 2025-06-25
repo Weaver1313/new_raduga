@@ -1,7 +1,4 @@
 import { expect } from "@playwright/test";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export class LoginWindow {
     constructor(page) {
